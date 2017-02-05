@@ -10,10 +10,9 @@
 		1739B73C1E46CE3F00B4520D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1739B73B1E46CE3F00B4520D /* Main.storyboard */; };
 		1739B73E1E46CF7A00B4520D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B73D1E46CF7A00B4520D /* EventsViewController.swift */; };
 		1739B7401E46CF8C00B4520D /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B73F1E46CF8C00B4520D /* PostsViewController.swift */; };
-		1739B7421E46CF9500B4520D /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B7411E46CF9500B4520D /* ProgressViewController.swift */; };
 		1739B7441E46D79800B4520D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B7431E46D79800B4520D /* Event.swift */; };
 		1739B7461E46DAB300B4520D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1739B7451E46DAB300B4520D /* GoogleService-Info.plist */; };
-		1739B7481E46DE8300B4520D /* ActivityEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B7471E46DE8300B4520D /* ActivityEventTableViewController.swift */; };
+		1739B7481E46DE8300B4520D /* EventTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B7471E46DE8300B4520D /* EventTableVC.swift */; };
 		1739B74A1E46E67B00B4520D /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739B7491E46E67B00B4520D /* Global.swift */; };
 		177F8CF11E45532000CC70F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177F8CF01E45532000CC70F4 /* AppDelegate.swift */; };
 		177F8CF31E45532000CC70F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177F8CF21E45532000CC70F4 /* ViewController.swift */; };
@@ -26,10 +25,9 @@
 		1739B73B1E46CE3F00B4520D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1739B73D1E46CF7A00B4520D /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		1739B73F1E46CF8C00B4520D /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
-		1739B7411E46CF9500B4520D /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		1739B7431E46D79800B4520D /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		1739B7451E46DAB300B4520D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1739B7471E46DE8300B4520D /* ActivityEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityEventTableViewController.swift; sourceTree = "<group>"; };
+		1739B7471E46DE8300B4520D /* EventTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableVC.swift; sourceTree = "<group>"; };
 		1739B7491E46E67B00B4520D /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		177F8CED1E45532000CC70F4 /* QHacks_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QHacks_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		177F8CF01E45532000CC70F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,9 +82,8 @@
 				1739B73D1E46CF7A00B4520D /* EventsViewController.swift */,
 				1739B7451E46DAB300B4520D /* GoogleService-Info.plist */,
 				1739B73F1E46CF8C00B4520D /* PostsViewController.swift */,
-				1739B7411E46CF9500B4520D /* ProgressViewController.swift */,
 				1739B7431E46D79800B4520D /* Event.swift */,
-				1739B7471E46DE8300B4520D /* ActivityEventTableViewController.swift */,
+				1739B7471E46DE8300B4520D /* EventTableVC.swift */,
 				1739B7491E46E67B00B4520D /* Global.swift */,
 			);
 			path = QHacks_iOS;
@@ -235,9 +232,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1739B74A1E46E67B00B4520D /* Global.swift in Sources */,
-				1739B7481E46DE8300B4520D /* ActivityEventTableViewController.swift in Sources */,
+				1739B7481E46DE8300B4520D /* EventTableVC.swift in Sources */,
 				1739B7441E46D79800B4520D /* Event.swift in Sources */,
-				1739B7421E46CF9500B4520D /* ProgressViewController.swift in Sources */,
 				1739B7401E46CF8C00B4520D /* PostsViewController.swift in Sources */,
 				177F8CF31E45532000CC70F4 /* ViewController.swift in Sources */,
 				177F8CF11E45532000CC70F4 /* AppDelegate.swift in Sources */,

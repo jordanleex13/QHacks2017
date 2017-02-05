@@ -14,6 +14,8 @@ class ActivityEventTableViewController: UITableViewController {
 
     @IBOutlet weak var activity_title: UILabel!
     
+    var activity_type = ""
+    
     var items: [Event] = []
     var rootRef: FIRDatabaseReference!
     
@@ -51,7 +53,10 @@ class ActivityEventTableViewController: UITableViewController {
                 // 4
                 print(item)
                 let event = Event(snapshot: item as! FIRDataSnapshot)
-                newItems.append(event)
+                if (event.activity_type == self.activity_type) {
+                    newItems.append(event)
+                }
+                
             }
             
             // 5
@@ -59,7 +64,7 @@ class ActivityEventTableViewController: UITableViewController {
             self.tableView.reloadData()
         })
         
-        writeToDB()
+        //writeToDB()
     }
     
     func writeToDB() {
@@ -157,14 +162,15 @@ class ActivityEventTableViewController: UITableViewController {
     */
 
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        print("HERE")
     }
-    */
+    
 
 }
