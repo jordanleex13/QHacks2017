@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs'
+source 'https://github.com/twilio/cocoapod-specs'
+
+target 'QHacks_iOS' do
+
+  # Pods for QHacks_iOS
+  pod 'Alamofire', '~> 4.3'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+end
