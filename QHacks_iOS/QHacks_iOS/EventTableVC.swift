@@ -55,6 +55,8 @@ class ActivityEventTableViewController: UITableViewController {
                 let event = Event(snapshot: item as! FIRDataSnapshot)
                 if (event.activity_type == self.activity_type) {
                     newItems.append(event)
+                } else if self.activity_type == "other" {
+                    newItems.append(event)
                 }
                 
             }
@@ -64,27 +66,9 @@ class ActivityEventTableViewController: UITableViewController {
             self.tableView.reloadData()
         })
         
-        //writeToDB()
-    }
-    
-    func writeToDB() {
-        
-        Global.sharedInstance.setName(name: "Jordan")
-        print(Global.sharedInstance.user_id)
-        
-        // MUST SET this as going to this activity
-        let choices = ["Swimming", "Running", "Basketball", "Biking"]
-        let randomIndex = Int(arc4random_uniform(UInt32(choices.count)))
-        Global.sharedInstance.setActivity(activity: choices[randomIndex])
-        
-        print(Global.sharedInstance.activity!)
-        let gInstance = Global.sharedInstance
-        let event = Event(activity_type: gInstance.activity!, creator_id: gInstance.user_id!)
-  
-        let eventRef = rootRef.child("events")
-        eventRef.childByAutoId().setValue(event.toAnyObject())
 
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -107,9 +91,15 @@ class ActivityEventTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
         let event = items[indexPath.row]
         
-        cell.textLabel?.text = event.activity_type
-        cell.detailTextLabel?.text = event.creator_id
-        
+        var str = event.creator_id
+        str += "\t\tParticipating: "
+        str += event.participants.count.description
+        str += "\n"
+//        str += "Date: "
+//        str += event.time
+        cell.textLabel?.text = str
+//        cell.detailTextLabel?.text = event.creator_id
+//        
         //toggleCellCheckbox(cell, isCompleted: groceryItem.completed)
         return cell
     }

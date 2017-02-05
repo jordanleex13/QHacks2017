@@ -1,18 +1,20 @@
 //
-//  EventsViewController.swift
+//  mActivitiesViewController.swift
 //  QHacks_iOS
 //
-//  Created by Jordan Lee on 2017-02-04.
+//  Created by Jordan Lee on 2017-02-05.
 //  Copyright © 2017 Jordan Lee. All rights reserved.
 //
 
 import UIKit
 
-class EventsViewController: UIViewController {
+class mActivitiesViewController: UIViewController {
 
+    @IBOutlet weak var activitiesTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("M Activities")
         // Do any additional setup after loading the view.
     }
 

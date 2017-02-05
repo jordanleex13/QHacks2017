@@ -36,15 +36,14 @@ class PostsViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
         let myVC = storyboard?.instantiateViewController(withIdentifier: "ActivityEventTableViewController") as! ActivityEventTableViewController
         
-        
         if sender == topLeft {
-            myVC.activity_type = "Running"
+            myVC.activity_type = "bike"
         } else if sender == topRight {
-            myVC.activity_type = "Swimming"
+            myVC.activity_type = "gym"
         } else if sender == bottomLeft {
-            myVC.activity_type = "Basketball"
+            myVC.activity_type = "run"
         } else {
-            myVC.activity_type = ""
+            myVC.activity_type = "other"
         }
         
         navigationController?.pushViewController(myVC, animated: true)

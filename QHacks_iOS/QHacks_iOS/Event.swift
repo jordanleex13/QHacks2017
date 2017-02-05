@@ -26,7 +26,7 @@ class Event {
         
         let snapshotValue = snapshot.value as! [String: AnyObject]
         activity_type = snapshotValue["activity_type"] as! String
-        time = snapshotValue["activity_type"] as! String
+        time = snapshotValue["time"] as! String
         creator_id = snapshotValue["creator_id"] as! String
         participants = snapshotValue["participants"] as! [String]
         

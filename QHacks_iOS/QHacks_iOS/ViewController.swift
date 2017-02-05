@@ -13,7 +13,11 @@ import UserNotifications
 class ViewController: UIViewController {
     
     
+    
     // MARK: Properties
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
     var isGrantedNotificationAccess:Bool = false
     
     @IBAction func send10SecNotification(_ sender: UIButton) {
@@ -32,7 +36,6 @@ class ViewController: UIViewController {
                 self.isGrantedNotificationAccess = granted
             }
         )
-        printMessagesForUser()
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
@@ -53,10 +56,24 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    @IBAction func SegueToMain(_ sender: AnyObject) {
+        
+        Global.sharedInstance.setName(name: usernameField.text!)
+        //performSegue(withIdentifier: "TabBarViewController", sender: self)
+        
+//        let myVC = storyboard?.instantiateViewController(withIdentifier: "TabBarViewController") as! UITabBarController
+//        
+//        navigationController?.pushViewController(myVC, animated: true)
+        
+        let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarViewController")
+        self.present(controller!, animated: true, completion: nil)
+        
+
+    }
     // Twilio server
     func printMessagesForUser() -> Void {
-        let json = ["user":"larry", "phone_number": "6048121916"]
+        let json = ["user": Global.sharedInstance.user_id, "phone_number": "6048121916"]
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
             
